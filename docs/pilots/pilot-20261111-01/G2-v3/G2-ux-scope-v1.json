@@ -1,0 +1,92 @@
+{
+  "run_id": "pilot-20261111-01",
+  "gate": "G2",
+  "lens": "g2_ux_scope",
+  "reviewer_id": "/root/g0_scope_review",
+  "artifact_sha256": "f8f8d5df43dd3d8ad582421780e695c7378f503f0a30c5f66c0a77613be8c755",
+  "verdict": "CHANGES_REQUIRED",
+  "findings": [
+    {
+      "id": "G2-UX-001",
+      "severity": "major",
+      "observation": "Схема C2 не сохраняет геометрическое условие заявленного поражения при изменении ширины. В drawC2 центр верхнего груза ax=0.31w, шарнир bx=0.78w, длина B=min(138,0.47w). При расчётной ширине SVG 390 груз до удара занимает x=104.9–136.9, а горизонтальная B — x=166.2–304.2: между ними 29.3 px. При w=600 зазор равен 128 px. Несмотря на отсутствие пересечения, сценарий переносит груз вниз и сообщает удар. Это расчёт исходного кода, не результат запуска браузера. Дополнительно финальное состояние step>=3 уменьшает длину B до length/2 без правила разрушения или изменения размера.",
+      "source": "artifacts/G2-v1/approval-card.html: drawC2 (ax/bx/length, hit, ветка step>=3); artifacts/G2-v1/concepts.md: C2, конкретная геометрия и альтернативный исход «Продолжать держать A»; artifacts/G2-v1/concepts.json: C2",
+      "action": "В новой версии сохранить локальные расстояния между шарниром и верхним грузом при всех размерах схемы и показать дугу B, действительно пересекающую верхний груз, но не нижний пьедестал. Сохранить длину и форму балки при её последующем падении. Повторно проверить координатные условия в исходнике на нескольких ширинах; это не заменяет будущую проверку контактов в A0.",
+      "resolution": "open",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G2-UX-002",
+      "severity": "major",
+      "observation": "Исходная B в drawC2 нарисована вертикально вниз от шарнира (bx,80): rect(bx-6,80,12,length). После снятия ограничителя ошибочный сценарий показывает её горизонтально влево на высоте шарнира. Для покоящейся вниз подвешенной балки простое снятие ограничителя не объясняет подъём против тяжести до этого положения. В правилах нет источника такого движения; скрытый импульс прямо исключён. Поэтому схема не даёт игроку причинно вывести центральное различие между удержанием A и переносом скобы на B.",
+      "source": "artifacts/G2-v1/approval-card.html: drawC2, начальная вертикальная B, дуга step===0 и горизонтальная ветка hit; artifacts/G2-v1/concepts.md: C2, минимальный A0 и конкретная геометрия; artifacts/G2-v1/concepts.json: C2",
+      "action": "Показать физически осмысленное исходное положение B и видимую опору/стопор, обеспечивающие движение после освобождения, например приподнятую балку с запасом потенциальной энергии. Согласовать исходное состояние, стопор второй волны, дугу удара и снятие самого шарнира в третьей волне между текстом, JSON и SVG. Не выдавать исправленную иллюстрацию за проверенную физику; контакты и устойчивость остаются NOT_RUN до A0.",
+      "resolution": "open",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G2-UX-003",
+      "severity": "minor",
+      "observation": "Текст использует отмеченную верхнюю зону сноса C2 и опасную зону C1 как часть условия победы/провала, но drawC1 и drawC2 не рисуют их границы или соответствующие подписи. В C1 видно, что груз не дошёл до фиксатора, но опасность оставшегося положения приходится узнавать из текста; в C2 необходимость освобождения верхнего объёма также не считывается из самой схемы.",
+      "source": "artifacts/G2-v1/approval-card.html: drawC1 и drawC2; artifacts/G2-v1/concepts.md: C1 «Успех, провал, обратная связь», C2 «Правило и осмысленный выбор» и «Конкретная геометрия»",
+      "action": "Добавить сдержанную подписанную границу/штриховку соответствующих зон либо явно ограничить схему демонстрацией только одного условия. Не полагаться только на цвет и не заслонять зоны управления или траектории.",
+      "resolution": "open",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G2-UX-004",
+      "severity": "note",
+      "observation": "Финальные C1/C2/C3 сопоставимы по форме: пять состояний, две альтернативы, действие, ограничение, причинный результат, риск тривиальной стратегии и ограниченный A0 с проверкой на второй малой геометрии. Управление описано последовательными касаниями или одним перетаскиванием, без обязательного многокасания и реакции во время обвала. 30–90 секунд обозначены целевой гипотезой; короткое успешное решение может закончиться быстрее, искусственное ожидание не предлагается. Рекомендация C3 обоснована проверяемостью и не подменяет пользовательский выбор. Пилот заканчивается G2; A0 в этом run не авторизован.",
+      "source": "artifacts/G2-v1/concepts.md; artifacts/G2-v1/concepts.json: scope и C1/C2/C3; artifacts/G2-v1/decision-card.md; artifacts/G2-v1/inputs-private.json; artifacts/G0-v1/brief.md; templates/g2-concept.md",
+      "action": "Сохранить эти ограничения и одинаковую полноту карточек при исправлении C2. Само добровольное ревью и клики карточки не являются решением пользователя или разрешением A0. Исправлений по этому наблюдению не требуется.",
+      "resolution": "fixed",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G2-UX-005",
+      "severity": "note",
+      "observation": "Материалы не выдают аналоги за доказательство новизны или спроса. Самостоятельно перепроверенная выборка первоисточников поддерживает ограниченные утверждения: автор Frosty Whistle описывает фиксацию объектов; авторская статья Ropes in Contraption Maker — тросы, блоки и технические трудности; страница автора Easter Physics — удаление блоков и попадание яиц в соответствующие корзины. Эти источники не доказывают точное правило единственной переносимой скобы или дока с одним слотом, и пакет этого не утверждает. План понимания отделён от реального результата: участников 0, ответы пусты, метрики null, NOT_RUN; удобство, удовольствие, спрос и длительность не установлены.",
+      "source": "artifacts/G2-v1/analog-notes.md; artifacts/G2-v1/analogs-sources.json; artifacts/G2-v1/source-additions.json; artifacts/G2-v1/comprehension-plan.md; artifacts/G2-v1/comprehension-results.json; https://zainmakesthings.itch.io/frosty-whistle; https://www.gamedeveloper.com/design/ropes-in-contraption-maker; https://www.kongregate.com/en/games/cbryant_03/easter-physics",
+      "action": "Сохранить различие между известной механикой, гипотезой конкретной комбинации и непроведённым исследованием. Сначала исправить причинную иллюстрацию C2, затем применять единые материалы/порядок предъявления из плана. Исправлений по честности текущих результатов не требуется.",
+      "resolution": "fixed",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G2-UX-006",
+      "severity": "note",
+      "observation": "Проверены исходная разметка и связи управления: кнопки и select имеют подписи, состояния выбора обозначены, вкладки и панели связаны идентификаторами, сценарии подписаны и не полагаются только на цвет. Стандартная оболочка превью содержит обработчики вкладок. Это статическая проверка, а не доказательство доступности или работоспособности в браузере. Сам пакет прямо называет карточку схемой с заранее заданными исходами: физика не вычисляется, согласие не записывается. Известная блокировка browser QA сохранена; проверок на устройстве и с реальными пользователями не было. Manifest содержит 16 файлов; его SHA пересчитан и совпал с переданным. Дубли scouting/final для аналогов идентичны по байтам.",
+      "source": "artifacts/G2-v1/approval-card.html; artifacts/G2-v1/self-check.json; artifacts/G2-v1/proposal.json; artifacts/G2-v1/concepts.md: «Что именно показывает карточка»; /workspace/scratch/1b91a4a6d796/g2-preview.html; scouting/g2-analogs/analogs.md; scouting/g2-analogs/sources.json",
+      "action": "Сохранять browser runtime/layout как BLOCKED, физику и пользовательское понимание как NOT_RUN. Не повышать статическую валидацию до заявления о runtime-проверке. После существенных исправлений сформировать новый manifest/SHA и получить новый независимый отчёт; этот CHANGES_REQUIRED относится только к G2 v1.",
+      "resolution": "fixed",
+      "risk_acceptance": null
+    }
+  ],
+  "evidence_refs": [
+    "AGENTS.md",
+    "docs/REVIEW_PROTOCOL.md",
+    "schemas/review.schema.json",
+    "templates/g2-concept.md",
+    "runs/pilot-20261111-01/artifacts/G2-v1/proposal.json",
+    "runs/pilot-20261111-01/artifacts/G0-v1/brief.md",
+    "runs/pilot-20261111-01/artifacts/G1-v2/research.md",
+    "runs/pilot-20261111-01/scouting/g2-design/ideas.md",
+    "runs/pilot-20261111-01/scouting/g2-analogs/analogs.md",
+    "runs/pilot-20261111-01/scouting/g2-analogs/sources.json",
+    "runs/pilot-20261111-01/artifacts/G2-v1/analog-notes.md",
+    "runs/pilot-20261111-01/artifacts/G2-v1/analogs-sources.json",
+    "runs/pilot-20261111-01/artifacts/G2-v1/approval-card.html",
+    "runs/pilot-20261111-01/artifacts/G2-v1/comprehension-plan.md",
+    "runs/pilot-20261111-01/artifacts/G2-v1/comprehension-results.json",
+    "runs/pilot-20261111-01/artifacts/G2-v1/concepts.json",
+    "runs/pilot-20261111-01/artifacts/G2-v1/concepts.md",
+    "runs/pilot-20261111-01/artifacts/G2-v1/decision-card.md",
+    "runs/pilot-20261111-01/artifacts/G2-v1/inputs-private.json",
+    "runs/pilot-20261111-01/artifacts/G2-v1/self-check.json",
+    "runs/pilot-20261111-01/artifacts/G2-v1/source-additions.json",
+    "https://zainmakesthings.itch.io/frosty-whistle",
+    "https://www.gamedeveloper.com/design/ropes-in-contraption-maker",
+    "https://www.kongregate.com/en/games/cbryant_03/easter-physics"
+  ],
+  "reviewed_at": "2026-11-10T23:07:51.367226Z",
+  "is_synthetic": false
+}

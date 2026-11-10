@@ -1,0 +1,31 @@
+{
+  "run_id": "pilot-20261111-01",
+  "gate": "G0",
+  "lens": "g0_product",
+  "reviewer_id": "/root/g0_product_review",
+  "artifact_sha256": "a78e130846c35a090cb812722e9dc50b4923692c5a2abede18ac0cd99a997b7a",
+  "verdict": "PASS",
+  "findings": [
+    {
+      "id": "G0-PRODUCT-01",
+      "severity": "note",
+      "observation": "Продуктовая логика, сравнимость трёх рамок и статические связи HTML/JS проверены. Визуальная раскладка на устройствах и работа обработчиков в реальном браузере не проверены: оба browser-маршрута заблокированы, что честно отражено в preflight. Этот PASS не относится к browser QA или реакции игроков.",
+      "source": "artifacts/G0-v1/preflight.json; artifacts/G0-v1/approval-card.html",
+      "action": "Сохранить это ограничение в handoff. Не представлять статическую проверку как проверку на телефоне или тест с игроками; реальные проверки выполнять при доступном разрешённом маршруте.",
+      "resolution": "open",
+      "risk_acceptance": null
+    }
+  ],
+  "evidence_refs": [
+    "artifacts/G0-v1/proposal.json",
+    "artifacts/G0-v1/brief.md",
+    "artifacts/G0-v1/platform-notes.md",
+    "artifacts/G0-v1/preflight.json",
+    "artifacts/G0-v1/approval-card.html",
+    "tools/pipeline.py status --run pilot-20261111-01: G0 awaiting_user, proposal SHA matches",
+    "tools/pipeline.py audit --run pilot-20261111-01: ok=true",
+    "Static HTML inspection: all queried IDs exist and are unique; buttons A/B/C initially aria-pressed=false; node --check accepted script"
+  ],
+  "reviewed_at": "2026-11-10T22:08:50.656431+00:00",
+  "is_synthetic": false
+}

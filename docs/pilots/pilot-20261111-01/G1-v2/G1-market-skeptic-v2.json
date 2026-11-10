@@ -1,0 +1,54 @@
+{
+  "run_id": "pilot-20261111-01",
+  "gate": "G1",
+  "lens": "market_skeptic",
+  "reviewer_id": "/root/g0_product_review",
+  "artifact_sha256": "d5fb9f956b0b9338b095b4f3dd12c915a7c016ab0cb3e70fe2150ada0b15f59d",
+  "verdict": "PASS",
+  "findings": [
+    {
+      "id": "G1-MARKET-01",
+      "severity": "major",
+      "observation": "Исправлено в v2. RV01 отражает авторскую публикацию Totem Destroyer, связан с S2/C1 и T1. И research.md, и видимая карточка прямо называют разрушение с сохранением известной базой. Строка о предлагаемом отличии заменена задачей найти существенное правило поверх базы. Дешёвая проверка G2 теперь сначала сопоставляет решение игрока с прямым аналогом. Рекомендация T1 ограничена проверяемостью и предусматривает возврат территории при отсутствии содержательного отличия.",
+      "source": "evidence.jsonl RV01; signals.jsonl S2; clusters.json C1; opportunities.json T1; artifacts/G1-v2/research.md; artifacts/G1-v2/approval-card.html; https://www.newgrounds.com/portal/view/447836, независимо прочитанная при предыдущей проверке.",
+      "action": "Замечание закрыто для этого пакета. Сохранить критерий сравнения с известной базой при разработке конкретных концептов G2.",
+      "resolution": "fixed",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G1-MARKET-02",
+      "severity": "major",
+      "observation": "Исправлено в v2. Добавлены оба независимых прямых аналога RV02 Last Call и RV03 Pack the Bag, связи S3/C2/T2, даты и пользовательское сравнение. Цена размещения, хрупкость и опора обозначены как уже существующие ограничения. Пробел наличия отдельного малого web-аналога заменён фактическими неизвестными результативности и пригодности Last Call для телефона. Наличие дополнительных страниц не выдано за количественную меру насыщенности.",
+      "source": "evidence.jsonl RV02/RV03; signals.jsonl S3; clusters.json C2; opportunities.json T2; artifacts/G1-v2/research.md; artifacts/G1-v2/approval-card.html; https://mlstudiogames.itch.io/last-call и https://luyaoze.itch.io/pack-the-bag, независимо прочитанные при предыдущей проверке.",
+      "action": "Замечание закрыто для этого пакета. На G2 сравнивать новое правило с четырьмя указанными аналогами; не выдавать неизвестные результаты малых игр за провал.",
+      "resolution": "fixed",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G1-MARKET-03",
+      "severity": "note",
+      "observation": "Ограничение сохранено корректно: схемы проверяют понимание, а не спрос, удовольствие, повтор или конверсию. Все три территории остаются confidence=low; целевая динамика US/UK 18–35 unknown, реальные тесты NOT_RUN, browser QA BLOCKED. Путь Shorts → профиль → игра остаётся согласованной гипотезой. Этот PASS разрешает предъявить выбор исследовательского направления; он не удостоверяет оригинальность будущей игры или коммерческую перспективу.",
+      "source": "artifacts/G1-v2/research.md; artifacts/G1-v2/self-check.json; artifacts/G1-v2/revision-notes.md; opportunities.json; reviews/G1-market-skeptic-v1.json.",
+      "action": "Оставить как открытую задачу будущих согласованных A0 и канального эксперимента. Не превращать результаты понимания G2 в вывод о спросе; контакты с игроками и публикация сейчас не требуются.",
+      "resolution": "open",
+      "risk_acceptance": null
+    }
+  ],
+  "evidence_refs": [
+    "artifacts/G1-v2/proposal.json: 19 файлов; authors не включают независимого ревьюера",
+    "reviews/G1-market-skeptic-v1.json: оба прежних major проверены по неизменным ID",
+    "reviews/G1-evidence-v1.json: прочитан как включённый материал, не заменяет собственное market_skeptic-ревью",
+    "artifacts/G1-v2/revision-notes.md",
+    "evidence.jsonl; signals.jsonl; clusters.json; opportunities.json: изменения сопоставлены с v1 snapshot, новые связи проверены",
+    "artifacts/G1-v2/research.md; artifacts/G1-v2/approval-card.html; artifacts/G1-v2/source-dates.json; artifacts/G1-v2/self-check.json: просмотрены изменения и контекст",
+    "scouting/ и artifacts/G0-v1/brief.md: совпадение байтов с ранее прочитанным v1 snapshot подтверждено",
+    "tools/pipeline.py status --run pilot-20261111-01: G1 awaiting_review, SHA d5fb9f956b0b9338b095b4f3dd12c915a7c016ab0cb3e70fe2150ada0b15f59d",
+    "tools/pipeline.py audit --run pilot-20261111-01: ok=true",
+    "tools/pipeline.py validate-research --run pilot-20261111-01: 16 evidence, 6 signals, 3 clusters, 3 territories, 10 source families total / 9 used",
+    "https://www.newgrounds.com/portal/view/447836",
+    "https://mlstudiogames.itch.io/last-call",
+    "https://luyaoze.itch.io/pack-the-bag"
+  ],
+  "reviewed_at": "2026-11-10T22:31:30.629068+00:00",
+  "is_synthetic": false
+}

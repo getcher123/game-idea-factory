@@ -1,0 +1,47 @@
+{
+  "run_id": "pilot-20261111-01",
+  "gate": "G0",
+  "lens": "g0_scope",
+  "reviewer_id": "/root/g0_scope_review",
+  "artifact_sha256": "a78e130846c35a090cb812722e9dc50b4923692c5a2abede18ac0cd99a997b7a",
+  "verdict": "PASS",
+  "findings": [
+    {
+      "id": "G0-SCOPE-001",
+      "severity": "note",
+      "observation": "Прочитаны все четыре перечисленных файла и manifest; общий SHA повторно вычислен и совпал. Карточка определяет аудиторию, географию, язык, платформу, сеанс, эмоцию, канал, будущую экономику и текущий предел затрат. Параметры явно представлены как предложения, а не пользовательские решения; жанр и правила оставлены открытыми.",
+      "source": "artifacts/G0-v1/proposal.json; artifacts/G0-v1/brief.md; artifacts/G0-v1/approval-card.html",
+      "action": "Предъявить зарегистрированную версию и получить конкретный ответ пользователя; не выводить утверждение из рекомендации A или локального просмотра.",
+      "resolution": "fixed",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G0-SCOPE-002",
+      "severity": "minor",
+      "observation": "В HTML пояснение «Утверждение — отдельным сообщением в беседе» показывается после раскрытия одного из вариантов; в начальном виде есть только указание, что решение ещё не принято. Полная инструкция выбора имеется в brief.md.",
+      "source": "artifacts/G0-v1/approval-card.html: g0-view-status; artifacts/G0-v1/brief.md: Решение сейчас",
+      "action": "В сопроводительном сообщении к карточке явно попросить ответить A, B или C либо назвать изменения. Не требуется менять замороженный пакет ради этого необязательного улучшения.",
+      "resolution": "open",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G0-SCOPE-003",
+      "severity": "note",
+      "observation": "preflight.json честно фиксирует blocked для browser screenshot/interaction путей и отличает создание wrapper от визуальной проверки. Это ревью проверяет содержание и границы G0 по файлам; оно не удостоверяет внешний спрос, технические платформенные утверждения по сетевым источникам или визуальное качество в браузере.",
+      "source": "artifacts/G0-v1/preflight.json; artifacts/G0-v1/platform-notes.md",
+      "action": "Сохранить границы проверки в handoff и при необходимости использовать текстовое сравнение как доступную пользователю форму. Не обозначать браузерную проверку как pass.",
+      "resolution": "fixed",
+      "risk_acceptance": null
+    }
+  ],
+  "evidence_refs": [
+    "artifacts/G0-v1/proposal.json",
+    "artifacts/G0-v1/brief.md",
+    "artifacts/G0-v1/platform-notes.md",
+    "artifacts/G0-v1/preflight.json",
+    "artifacts/G0-v1/approval-card.html",
+    "run.json"
+  ],
+  "reviewed_at": "2026-11-10T22:08:23.113201Z",
+  "is_synthetic": false
+}

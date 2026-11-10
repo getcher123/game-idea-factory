@@ -1,0 +1,18 @@
+{
+  "run_id": "pilot-20261111-01",
+  "gate": "G1",
+  "version": "v2",
+  "status": "awaiting_user",
+  "artifact_sha256": "d5fb9f956b0b9338b095b4f3dd12c915a7c016ab0cb3e70fe2150ada0b15f59d",
+  "scope": "Public projection; complete immutable package and approval history are in the private run checkpoint. These files alone do not reconstruct the full package.",
+  "source_files": {
+    "evidence.jsonl": "8cd02a7234b257ce90098014c272a92fe7487b9b510aeb570ab01ec3282a9ee0",
+    "signals.jsonl": "c2a1f4dc30a9cfb9adcafaf1c3588f2c449db188f57cd69bacb0390d2b847b96",
+    "clusters.json": "7fc752b2cf2172a06dfa339fe6865c40f5811d7ab8f72d53dffb35469ecccece",
+    "opportunities.json": "010e437bb808ff0bbe660c18fc768e6b4f8a646b0df348580ef7584c0297f91f"
+  },
+  "reviews": {
+    "evidence": "G1-evidence-v2.json",
+    "market_skeptic": "G1-market-skeptic-v2.json"
+  }
+}

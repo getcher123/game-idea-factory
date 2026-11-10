@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-11-10T22:30:17+00:00",
+  "checks": {
+    "html_structure": "PASS",
+    "unique_ids_and_tab_links": "PASS",
+    "javascript_syntax": "PASS",
+    "schema_and_relationships": "PASS from validate-research for v2",
+    "browser_layout_and_interactions": "BLOCKED: existing Chromium socket restriction and cloud file URL rejection; no bypass attempted",
+    "human_comprehension_test": "NOT_RUN",
+    "competitor_gameplay": "NOT_RUN",
+    "review_fixes_visible": "Totem Destroyer / Last Call / Pack the Bag appear in user-facing comparison"
+  },
+  "limitations": [
+    "Static diagram represents a hypothetical decision; no physics or playable game is simulated.",
+    "Tabs only inspect alternatives; approval requires a real user message."
+  ]
+}

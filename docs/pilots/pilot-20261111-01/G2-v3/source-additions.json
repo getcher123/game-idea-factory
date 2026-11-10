@@ -1,0 +1,37 @@
+{
+  "observed_at": "2026-11-10T23:00:08.466438Z",
+  "author": "/root",
+  "method": "Opened primary author page; no game launched",
+  "sources": [
+    {
+      "id": "G2R01",
+      "title": "Frosty Whistle",
+      "url": "https://zainmakesthings.itch.io/frosty-whistle",
+      "source_family": "zainmakesthings_frosty_whistle",
+      "source_type": "primary_author_game_page",
+      "published_at": null,
+      "event_at": null,
+      "date_note": "No reliable publication/event date captured; do not infer from crawl time",
+      "observed_on": "2026-11-10",
+      "language": "en",
+      "region": null,
+      "age_group": null,
+      "traffic_origin": "unknown",
+      "metrics": [],
+      "repost_of": null,
+      "ref_ids": [
+        "turn43view0"
+      ],
+      "raw_excerpt": "freeze objects in place",
+      "verified_claim": "Автор описывает замораживание объектов на месте, включая движущиеся платформы.",
+      "not_established": [
+        "Single transferable clamp",
+        "Demolition waves",
+        "Current audience demand",
+        "Actual usability"
+      ],
+      "actual_gameplay_observed": false,
+      "playtest_status": "not_run"
+    }
+  ]
+}
