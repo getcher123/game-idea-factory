@@ -1,0 +1,399 @@
+{
+  "task": "G2 prior-art scouting for approved G1 T1",
+  "run_id": "pilot-20261111-01",
+  "author": "/root/g1_game_scout",
+  "role": "research contributor; not independent final reviewer",
+  "compiled_at": "2026-11-10T22:45:43Z",
+  "time_basis": "clock tool UTC; exact page observation times were not separately captured, so sources record observed_on only",
+  "methodology": "Engine1 primary-source search followed by opening each included page. Mechanics extracted from author/publisher/platform descriptions, not playtests. Older games are prior art, not current demand signals.",
+  "source_count": 10,
+  "sources": [
+    {
+      "observed_on": "2026-11-10",
+      "language": "en",
+      "region": null,
+      "age_group": null,
+      "traffic_origin": "unknown",
+      "metrics": [],
+      "actual_gameplay_observed": false,
+      "playtest_status": "not_run",
+      "repost_of": null,
+      "id": "G2A01",
+      "title": "Totem Destroyer",
+      "url": "https://www.newgrounds.com/portal/view/447836",
+      "source_family": "gabs_totem_destroyer",
+      "source_type": "author_upload_description",
+      "primary_provenance": "Author regulargabs; description credits GABS.TV and Armor Games.",
+      "ref_ids": [
+        "turn37view0"
+      ],
+      "published_at": "2008-07-07T19:07:00Z",
+      "published_date": "2008-07-07",
+      "event_at": "2008-07-07T19:07:00Z",
+      "event_kind": "Newgrounds upload",
+      "event_date": "2008-07-07",
+      "date_precision": "minute",
+      "raw_date": "Uploaded Jul 7, 2008 3:07 PM EDT",
+      "date_note": "EDT explicitly supplied; converted to UTC. Upload date is not a claim about first worldwide release.",
+      "raw_excerpt": "destroy the totems without letting the golden Idol",
+      "source_location": "Author Comments; Credits & Info / Uploaded",
+      "verified_claim": "Автор задаёт разрушение тотемов при сохранении золотого идола над землёй; баланс — средство сохранения.",
+      "relevance": [
+        "T1 baseline",
+        "C1",
+        "C2",
+        "C3"
+      ],
+      "not_established": "Ни переносимая опора, ни создание противовеса, ни мост из обломков на этой странице не описаны."
+    },
+    {
+      "observed_on": "2026-11-10",
+      "language": "en",
+      "region": null,
+      "age_group": null,
+      "traffic_origin": "unknown",
+      "metrics": [],
+      "actual_gameplay_observed": false,
+      "playtest_status": "not_run",
+      "repost_of": null,
+      "id": "G2A02",
+      "title": "Cut the Rope — Puzzle Game Franchise",
+      "url": "https://www.zeptolab.com/franchise/cut-the-rope",
+      "source_family": "zeptolab_cut_the_rope",
+      "source_type": "developer_official_description",
+      "primary_provenance": "Official ZeptoLab franchise page.",
+      "ref_ids": [
+        "turn37view1"
+      ],
+      "published_at": null,
+      "published_date": null,
+      "event_at": null,
+      "event_kind": null,
+      "event_date": null,
+      "date_precision": "unknown",
+      "raw_date": null,
+      "date_note": "Publication date of this gameplay description is not shown. Dated news teasers do not date the description.",
+      "raw_excerpt": "cut the ropes, figure out the sequence, and get the candy to Om Nom",
+      "source_location": "Opening description; How to play",
+      "verified_claim": "Разрезы направляют конфету; выбор порядка и времени взаимодействия меняет падение/раскачивание и путь через объекты уровня.",
+      "relevance": [
+        "C1"
+      ],
+      "not_established": "Добавление новой связи между произвольной парой тел и выбор груза-противовеса на странице не подтверждены."
+    },
+    {
+      "observed_on": "2026-11-10",
+      "language": "en",
+      "region": null,
+      "age_group": null,
+      "traffic_origin": "unknown",
+      "metrics": [],
+      "actual_gameplay_observed": false,
+      "playtest_status": "not_run",
+      "repost_of": null,
+      "id": "G2A03",
+      "title": "World of Goo 2 is out NOW!",
+      "url": "https://tomorrowcorporation.com/posts/world-of-goo-2-is-out-now",
+      "source_family": "tomorrow_corporation_world_of_goo",
+      "source_type": "developer_release_post",
+      "primary_provenance": "Tomorrow Corporation; by KyleGray; signed Tomorrow Corporation and 2DBOY.",
+      "ref_ids": [
+        "turn38view0"
+      ],
+      "published_at": null,
+      "published_date": "2024-08-02",
+      "event_at": null,
+      "event_kind": "release announced",
+      "event_date": "2024-08-02",
+      "date_precision": "day",
+      "raw_date": "Friday, August 2nd, 2024 at 8:00 am",
+      "date_note": "Timezone is not given, so no UTC timestamp is fabricated.",
+      "raw_excerpt": "build bridges, grow towers, terraform terrain",
+      "source_location": "Release post body; author/date footer",
+      "verified_claim": "Живые жидкие существа служат материалом мостов, башен и изменения рельефа; поток можно направлять и превращать в Goo Balls.",
+      "relevance": [
+        "C1 adjacent construction",
+        "C3"
+      ],
+      "not_established": "Именно обломки разрушенной башни как несущая переправа не подтверждены текстом; это аналог преобразования материала и постройки полезной структуры."
+    },
+    {
+      "observed_on": "2026-11-10",
+      "language": "en",
+      "region": null,
+      "age_group": null,
+      "traffic_origin": "unknown",
+      "metrics": [],
+      "actual_gameplay_observed": false,
+      "playtest_status": "not_run",
+      "repost_of": null,
+      "id": "G2A04",
+      "title": "Rope Rescue",
+      "url": "https://www.crazygames.com/game/rope-rescue",
+      "source_family": "tapnation_rope_rescue_crazygames",
+      "source_type": "platform_game_listing",
+      "primary_provenance": "Direct CrazyGames game page identifies TapNation as developer.",
+      "ref_ids": [
+        "turn41view2"
+      ],
+      "published_at": null,
+      "published_date": null,
+      "event_at": null,
+      "event_kind": "listed portal release",
+      "event_date": "2025-03",
+      "date_precision": "month",
+      "raw_date": "Released March 2025",
+      "date_note": "Portal release month; not asserted to be first native release.",
+      "raw_excerpt": "Drag the left mouse button to establish the rope",
+      "source_location": "Developer; Released; Controls",
+      "verified_claim": "Игрок протягивает верёвку, затем удерживает кнопку, чтобы люди начали пользоваться зиплайном; цель — спасение с обходом ловушек.",
+      "relevance": [
+        "C1"
+      ],
+      "not_established": "Зиплайн — маршрут спасения; страница не подтверждает передачу сил между грузом и спасаемым объектом. Не смешивать с одноимёнными играми других авторов."
+    },
+    {
+      "observed_on": "2026-11-10",
+      "language": "en",
+      "region": null,
+      "age_group": null,
+      "traffic_origin": "unknown",
+      "metrics": [],
+      "actual_gameplay_observed": false,
+      "playtest_status": "not_run",
+      "repost_of": null,
+      "id": "G2A05",
+      "title": "Freeze!",
+      "url": "https://play.google.com/store/apps/details?id=com.frozengun.freeze",
+      "source_family": "frozen_gun_freeze",
+      "source_type": "developer_store_description",
+      "primary_provenance": "Google Play listing by Frozen Gun Games.",
+      "ref_ids": [
+        "turn42view1"
+      ],
+      "published_at": null,
+      "published_date": null,
+      "event_at": null,
+      "event_kind": "app update shown",
+      "event_date": "2024-02-12",
+      "date_precision": "day",
+      "raw_date": "Updated on Feb 12, 2024",
+      "date_note": "Update date only; not treated as initial game release.",
+      "raw_excerpt": "continuously turn the cell in both directions",
+      "source_location": "About this game; Updated on",
+      "verified_claim": "Палец вращает камеру вокруг героя; кнопка Freeze! позволяет преодолевать действие гравитации.",
+      "relevance": [
+        "C2"
+      ],
+      "not_established": "Перенос единственной фиксации между частями разрушающейся конструкции и фазовые остановки не подтверждены. Подробную C2-проверку выполняет ведущий агент."
+    },
+    {
+      "observed_on": "2026-11-10",
+      "language": "en",
+      "region": null,
+      "age_group": null,
+      "traffic_origin": "unknown",
+      "metrics": [],
+      "actual_gameplay_observed": false,
+      "playtest_status": "not_run",
+      "repost_of": null,
+      "id": "G2A06",
+      "title": "Splitter",
+      "url": "https://www.kongregate.com/en/games/evgenykarataev/splitter",
+      "source_family": "evgeny_karataev_splitter",
+      "source_type": "author_platform_listing",
+      "primary_provenance": "Direct listing by EvgenyKarataev with developer attribution.",
+      "ref_ids": [
+        "turn41view1"
+      ],
+      "published_at": null,
+      "published_date": null,
+      "event_at": null,
+      "event_kind": "listed portal release",
+      "event_date": "2008-10-30",
+      "date_precision": "day",
+      "updated_date": "2013-10-02",
+      "raw_date": "Released: October 30, 2008; Last updated: October 02, 2013",
+      "date_note": "Platform dates as displayed. An old developer-update timestamp is not used as a date for the iPhone release mentioned in that update.",
+      "raw_excerpt": "splitting certain objects and let gravity do its thing",
+      "source_location": "Description; How to Play; release metadata",
+      "verified_claim": "Разрезать деревянные объекты и соединения, чтобы гравитацией привести героя к выходу; металл и кирпич разрезать нельзя.",
+      "relevance": [
+        "C3",
+        "C1 adjacent gravity routing"
+      ],
+      "not_established": "Точная сборка несущего моста из свободных обломков не описана. Современный FAQ и пользовательские отзывы не использованы как авторское доказательство."
+    },
+    {
+      "observed_on": "2026-11-10",
+      "language": "en",
+      "region": null,
+      "age_group": null,
+      "traffic_origin": "unknown",
+      "metrics": [],
+      "actual_gameplay_observed": false,
+      "playtest_status": "not_run",
+      "repost_of": null,
+      "id": "G2A07",
+      "title": "Crush the Castle Legacy Collection",
+      "url": "https://armorgamesstudios.com/games/crush-the-castle",
+      "source_family": "armor_games_crush_the_castle",
+      "source_type": "publisher_official_description",
+      "primary_provenance": "Armor Games Studios official game page.",
+      "ref_ids": [
+        "turn42view0"
+      ],
+      "published_at": null,
+      "published_date": null,
+      "event_at": null,
+      "event_kind": "Legacy Collection release",
+      "event_date": "2022-03-29",
+      "date_precision": "day",
+      "raw_date": "Release Date March 29, 2022",
+      "date_note": "Collection date only; not the release date of the original Flash game.",
+      "raw_excerpt": "loading up your trusty trebuchet",
+      "source_location": "Summary; Release Date",
+      "verified_claim": "Физическое разрушение замка посредством требушета — известная база действия и зрелища обрушения.",
+      "relevance": [
+        "T1 baseline",
+        "C3 contrast"
+      ],
+      "not_established": "На этой странице нет условия сохранить объект, собрать полезную структуру из обломков или переносить опору."
+    },
+    {
+      "observed_on": "2026-11-10",
+      "language": "en",
+      "region": null,
+      "age_group": null,
+      "traffic_origin": "unknown",
+      "metrics": [],
+      "actual_gameplay_observed": false,
+      "playtest_status": "not_run",
+      "repost_of": null,
+      "id": "G2A08",
+      "title": "Ropes in Contraption Maker",
+      "url": "https://www.gamedeveloper.com/design/ropes-in-contraption-maker",
+      "source_family": "kevin_ryan_contraption_maker",
+      "source_type": "developer_first_person_technical_post",
+      "primary_provenance": "Kevin Ryan explicitly identifies himself as Contraption Maker developer; first-person implementation post hosted by Game Developer, not a reporter's review.",
+      "ref_ids": [
+        "turn41view0",
+        "turn42view4"
+      ],
+      "published_at": null,
+      "published_date": "2016-03-30",
+      "event_at": null,
+      "event_kind": null,
+      "event_date": null,
+      "date_precision": "day",
+      "raw_date": "March 30, 2016",
+      "date_note": "Publication date of this hosted post. Author mentions earlier original blog publication; its exact date is not established.",
+      "raw_excerpt": "their only game play function is to transfer forces between the parts attached to either end",
+      "source_location": "The Basics; Constraining the Rope Ends; Pulleys",
+      "verified_claim": "Верёвки передают силы между двумя деталями; реализованы блоки/pulleys, разные массы на концах, пример с воздушным шаром и тяжёлым шаром.",
+      "relevance": [
+        "C1 direct physical prior art"
+      ],
+      "not_established": "Это не доказательство того же короткого спасательного цикла. Зато связь тел, противодействующие массы и передача силы через блок уже не могут быть заявлены новой механикой."
+    },
+    {
+      "observed_on": "2026-11-10",
+      "language": "en",
+      "region": null,
+      "age_group": null,
+      "traffic_origin": "unknown",
+      "metrics": [],
+      "actual_gameplay_observed": false,
+      "playtest_status": "not_run",
+      "repost_of": null,
+      "id": "G2A09",
+      "title": "Icebreaker",
+      "url": "https://www.newgrounds.com/portal/view/521450",
+      "source_family": "nitrome_icebreaker",
+      "source_type": "author_upload_description",
+      "primary_provenance": "Newgrounds author entry attributed to Nitrome.",
+      "ref_ids": [
+        "turn46view0"
+      ],
+      "published_at": "2009-12-17T17:27:00Z",
+      "published_date": "2009-12-17",
+      "event_at": "2009-12-17T17:27:00Z",
+      "event_kind": "Newgrounds upload",
+      "event_date": "2009-12-17",
+      "date_precision": "minute",
+      "raw_date": "Uploaded Dec 17, 2009 12:27 PM EST",
+      "date_note": "EST explicitly supplied; converted to UTC. Upload date is not asserted to be first original release.",
+      "raw_excerpt": "Slice the ice by clicking and dragging",
+      "source_location": "Author Comments; Credits & Info / Uploaded",
+      "verified_claim": "Нужно резать ледник, чтобы спасти застрявших в нём викингов и довести их до лодки.",
+      "relevance": [
+        "C3 direct rescue-through-cutting prior art"
+      ],
+      "not_established": "Из одного описания нельзя заключить, что обломки используются именно как несущий мост; не заменяет просмотр/игру."
+    },
+    {
+      "id": "G2A10",
+      "title": "Easter Physics",
+      "url": "https://www.kongregate.com/en/games/cbryant_03/easter-physics",
+      "source_family": "cbryant_easter_physics",
+      "source_type": "author_platform_listing",
+      "primary_provenance": "Direct Kongregate listing by cbryant_03; developer identity is explicitly displayed.",
+      "ref_ids": [
+        "turn51view0"
+      ],
+      "observed_on": "2026-11-10",
+      "language": "en",
+      "region": null,
+      "age_group": null,
+      "traffic_origin": "unknown",
+      "metrics": [],
+      "actual_gameplay_observed": false,
+      "playtest_status": "not_run",
+      "repost_of": null,
+      "published_at": null,
+      "published_date": null,
+      "event_at": null,
+      "event_kind": "listed portal release",
+      "event_date": "2010-03-29",
+      "date_precision": "day",
+      "updated_date": "2010-03-29",
+      "raw_date": "Released: March 29, 2010; Last updated: March 29, 2010",
+      "date_note": "Platform date as displayed; timezone and first worldwide release are not established.",
+      "raw_excerpt": "Use mouse to remove white blocks",
+      "source_location": "Description; How to Play; release metadata",
+      "verified_claim": "Удалять белые блоки, чтобы яйца падали в корзины соответствующего цвета.",
+      "relevance": [
+        "C3 catcher replacement"
+      ],
+      "not_established": "Одна подвижная корзина, вместимость один груз, выгрузка в боковой док и фазовое изменение доступности следующего перехвата текстом не подтверждены."
+    }
+  ],
+  "exclusions": [
+    {
+      "url": "https://armorgames.com/play/2569/splitter",
+      "reason": "Direct open returned 403; used accessible canonical developer listing on Kongregate instead."
+    },
+    {
+      "url": "https://armorgames.com/news/production-notes-crush-the-castle",
+      "reason": "Search excerpt surfaced developer post dated 2009-04-28, but direct open returned 403; not used as an included evidentiary source."
+    },
+    {
+      "url": "https://freeze2.com/press/",
+      "reason": "Search surfaced useful official description but direct open returned 502; used accessible Freeze! Google Play developer description."
+    },
+    {
+      "url": "https://steamcommunity.com/app/241240/discussions/1/558752450088957284/?l=english",
+      "reason": "Direct open unavailable; replaced with an accessible first-person developer technical article."
+    },
+    {
+      "url": "https://mautigames.com/counterweight/",
+      "reason": "Search result described inverse-linked bots, but opened page only yielded title and controls icon. Not promoted into verified mechanics evidence."
+    },
+    {
+      "url": "https://store.steampowered.com/app/2150530/Rubble/",
+      "reason": "Accessible developer description confirms destructive traversal and terrain respawn, but did not confirm debris becoming a load-bearing bridge; omitted as weaker than Splitter/Icebreaker for this task."
+    }
+  ],
+  "updated_at": "2026-11-10T22:49:15Z",
+  "addendum": "Parent proposed replacing C3 bridge with a single-slot movable catcher. One additional primary source was checked; no claim of exact-match absence is made."
+}

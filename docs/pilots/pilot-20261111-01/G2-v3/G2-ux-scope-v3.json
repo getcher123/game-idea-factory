@@ -1,0 +1,103 @@
+{
+  "run_id": "pilot-20261111-01",
+  "gate": "G2",
+  "lens": "g2_ux_scope",
+  "reviewer_id": "/root/g0_scope_review",
+  "artifact_sha256": "f6e5718ac089df6743b3f4766e760e3ef2f44d685e3545ffc61a6a5650d626a4",
+  "verdict": "PASS",
+  "findings": [
+    {
+      "id": "G2-UX-007",
+      "severity": "major",
+      "observation": "Закрыто в v3 на уровне геометрической согласованности сценария. B исходно поднята вверх-влево и целиком находится справа от A; короткая дуга идёт против часовой стрелки от −105.664267° к показанным −134°. Независимый SAT-анализ ориентированного прямоугольника B и прямоугольных границ A/груза на 5001 угловом положении для каждой из ширин 280/320/390/600/736 не обнаружил пересечения A до или в кадре контакта. Контакт с границами груза обнаружен в конечном образце −134°; шаг независимой выборки грубее авторской проверки 10001 положения, поэтому более точное значение −133.997° отдельно не утверждается. B изначально отделена по горизонтали от A примерно на 21.158 единицы SVG. При успешном вертикальном переносе сохраняются длина и наклон; B остаётся справа от пьедестала с зазором около 22.158, её минимальный y≈163.298 находится ниже нижней границы верхней зоны y=147. Прежнее прохождение сквозь удержанную A устранено. Это проверка дискретной статической геометрии прямоугольных границ, не непрерывной динамики, отрисованного скруглённого контура или физического контакта.",
+      "source": "artifacts/G2-v3/approval-card.html: drawC2, исходное положение, hitAngle=-134, короткая дуга A ... 0 0 0, rotate/translate; artifacts/G2-v3/concepts.md: C2, правило и конкретная развилка; artifacts/G2-v3/concepts.json: C2.rule_and_choice, sample.layout, a0_minimum; artifacts/G2-v3/self-check.json; artifacts/G2-v3/revision-notes.md; reviews/G2-ux-scope-v2.json: G2-UX-007",
+      "action": "Сохранить свободный путь до контакта и раннее завершение провала. При отдельно согласованном A0 проверить действительные формы коллайдеров, первый контакт, движение и устойчивость; не принимать статический PASS за такую проверку. Дополнительного блокирующего исправления G2 по этому ID не требуется.",
+      "resolution": "fixed",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G2-UX-001",
+      "severity": "major",
+      "observation": "Закрытие из v2 сохраняется. Координаты C2 заданы относительно центра, длина B фиксирована для всех проверенных ширин; вертикальный уход сохраняет те же параметры rect и угол. В v3 показан ранний контакт краем, а не намеренное попадание конца балки в центр груза. Независимые вызовы фактических функций рисунка подтвердили одинаковые размерные отношения на пяти ширинах. Исходные недосягаемость при широком SVG и сокращение балки вдвое не вернулись.",
+      "source": "artifacts/G2-v3/approval-card.html: drawC2; artifacts/G2-v3/revision-notes.md; reviews/G2-ux-scope-v1.json: G2-UX-001; reviews/G2-ux-scope-v2.json: G2-UX-001",
+      "action": "Сохранять размерные отношения при дальнейшей реализации. Проверка масштаба не означает подтверждения мобильной вёрстки или физики.",
+      "resolution": "fixed",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G2-UX-002",
+      "severity": "major",
+      "observation": "Закрытие сохраняется с уточнённым исходным положением v3. B поднята вверх-влево, её центр масс выше оси и левее неё; гравитация согласуется с коротким махом против часовой стрелки. Видимые стопор и шарнир имеют разные волны удаления. В безопасной ветке при удалении шарнира B освобождается с нулевой скоростью и уходит вертикально, сохраняя наклон. Прежний необъяснённый подъём балки из нижнего покоя отсутствует; правила и рисунок не требуют скрытого импульса.",
+      "source": "artifacts/G2-v3/approval-card.html: drawC2; artifacts/G2-v3/concepts.md: C2; artifacts/G2-v3/concepts.json: C2.rule_and_choice и sample.layout; reviews/G2-ux-scope-v1.json: G2-UX-002; reviews/G2-ux-scope-v2.json: G2-UX-002",
+      "action": "Для будущего A0 проверять энергию движения и контакты на выбранном движке. Не переносить это закрытие на утверждение о проверенной физической сборке.",
+      "resolution": "fixed",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G2-UX-003",
+      "severity": "minor",
+      "observation": "Закрытие сохраняется: C1 и C2 имеют подписанные пунктирные зоны сноса. В успешной схеме C1 груз выше опасной зоны; в C2 A с грузом и освобождённая B покидают отмеченную верхнюю область. Пунктир и подписи дополняют цвет. Browser layout, фактические размеры текста и читаемость на телефоне остаются BLOCKED.",
+      "source": "artifacts/G2-v3/approval-card.html: .zone, drawC1, drawC2; artifacts/G2-v3/self-check.json; reviews/G2-ux-scope-v1.json: G2-UX-003; reviews/G2-ux-scope-v2.json: G2-UX-003",
+      "action": "Сохранять подписанные зоны. Проверить фактическую читаемость, когда доступна разрешённая среда браузера; текущий вывод относится к разметке и координатам.",
+      "resolution": "fixed",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G2-UX-004",
+      "severity": "note",
+      "observation": "Три концепта остаются сопоставимыми: пять наблюдаемых состояний, две показанные альтернативы, действие/ограничение/результат, риски и ограниченная проверка A0. C1/C3 в concepts.json не изменились относительно v2. У C2 согласованы MD/JSON/HTML: старт со скобой на A, только перенос, две волны, безопасная последовательность A→B→A. Полное снятие явно запрещено; риск искусственного ограничения и доминирования «всегда переключайся» сохранён. Для A0 названы все допустимые ветки и необходимость ещё не построенной контрольной геометрии. Один палец и последовательные действия сохранены. 30–90 секунд остаются целью; искусственное ожидание не вводится. Рекомендация C3 не подменяет выбор. end_gate G2 и отсутствие разрешения A0 явно указаны.",
+      "source": "artifacts/G2-v3/concepts.md; artifacts/G2-v3/concepts.json; artifacts/G2-v3/approval-card.html; artifacts/G2-v3/comprehension-plan.md; artifacts/G2-v3/decision-card.md; artifacts/G2-v3/revision-notes.md",
+      "action": "Можно предъявлять три концепта для реального выбора пользователя в границах G2, сохранив честные риски. Продолжение до A0 требует отдельного решения; положительное ревью не является выбором концепта.",
+      "resolution": "fixed",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G2-UX-005",
+      "severity": "note",
+      "observation": "Доказательность не завышена. analog-notes.md, analogs-sources.json, source-additions.json, comprehension-plan.md, comprehension-results.json и inputs-private.json совпадают с v2 по байтам. Новых внешних фактов или заявлений о спросе/мировой новизне не добавлено. Источники и их ограничения уже независимо проверены в v1; эта локальная правка не требует повторного получения тех же страниц. План по-прежнему отделяет понимание EN-сценария от интереса/удержания/спроса и отдельно учитывает US/UK. Реальных участников 0, ответы пусты, метрики null, NOT_RUN; синтетические реакции не выдаются за людей.",
+      "source": "artifacts/G2-v3/analog-notes.md; artifacts/G2-v3/analogs-sources.json; artifacts/G2-v3/source-additions.json; artifacts/G2-v3/comprehension-plan.md; artifacts/G2-v3/comprehension-results.json; reviews/G2-ux-scope-v1.json: G2-UX-005; reviews/G2-ux-scope-v2.json: G2-UX-005",
+      "action": "Сохранять эти ограничения при предъявлении. Будущий тест понимания и проверку игры проводить отдельно; текущий PASS не подтверждает предпочтения или спрос.",
+      "resolution": "fixed",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G2-UX-006",
+      "severity": "note",
+      "observation": "Manifest содержит 21 файл, включая оба раунда реальных независимых отзывов и историю исправлений; полный SHA независимо пересчитан и совпал. Фактические drawC1/drawC2/drawC3 независимо исполнены в Node: 150 комбинаций концепта/ширины/ветки/состояния возвращают корректный XML без NaN/Infinity. Дополнительно выполнен независимый SAT-анализ 25005 угловых положений C2 (5001 на каждую из пяти ширин). Проверены уникальность ID и существование целей for/aria-controls/aria-labelledby; подписи элементов, aria-pressed и текстовый результат сохранены. Это статические проверки источника и строк SVG. DOM, поведение вкладок/клавиатуры, реальная вёрстка, скруглённые визуальные контуры и физика не тестировались. Browser runtime/layout остаётся BLOCKED; физика и человеческое понимание NOT_RUN. Карточка честно описана как заранее заданная схема, не записывающая согласие.",
+      "source": "artifacts/G2-v3/proposal.json; artifacts/G2-v3/self-check.json; artifacts/G2-v3/approval-card.html; artifacts/G2-v3/concepts.md; artifacts/G2-v3/decision-card.md",
+      "action": "Трактовать PASS только как независимое UX/scope-ревью согласованности данного G2-пакета. Не объявлять браузерную доступность, игровую физику или понимание людей проверенными. Любое содержательное изменение пакета требует нового SHA и применимого повторного ревью.",
+      "resolution": "fixed",
+      "risk_acceptance": null
+    }
+  ],
+  "evidence_refs": [
+    "AGENTS.md",
+    "docs/REVIEW_PROTOCOL.md",
+    "schemas/review.schema.json",
+    "templates/g2-concept.md",
+    "runs/pilot-20261111-01/artifacts/G2-v3/proposal.json",
+    "runs/pilot-20261111-01/artifacts/G0-v1/brief.md",
+    "runs/pilot-20261111-01/artifacts/G1-v2/research.md",
+    "runs/pilot-20261111-01/scouting/g2-design/ideas.md",
+    "runs/pilot-20261111-01/scouting/g2-analogs/analogs.md",
+    "runs/pilot-20261111-01/scouting/g2-analogs/sources.json",
+    "runs/pilot-20261111-01/reviews/G2-game-design-v1.json",
+    "runs/pilot-20261111-01/reviews/G2-ux-scope-v1.json",
+    "runs/pilot-20261111-01/reviews/G2-game-design-v2.json",
+    "runs/pilot-20261111-01/reviews/G2-ux-scope-v2.json",
+    "runs/pilot-20261111-01/artifacts/G2-v3/analog-notes.md",
+    "runs/pilot-20261111-01/artifacts/G2-v3/analogs-sources.json",
+    "runs/pilot-20261111-01/artifacts/G2-v3/approval-card.html",
+    "runs/pilot-20261111-01/artifacts/G2-v3/comprehension-plan.md",
+    "runs/pilot-20261111-01/artifacts/G2-v3/comprehension-results.json",
+    "runs/pilot-20261111-01/artifacts/G2-v3/concepts.json",
+    "runs/pilot-20261111-01/artifacts/G2-v3/concepts.md",
+    "runs/pilot-20261111-01/artifacts/G2-v3/decision-card.md",
+    "runs/pilot-20261111-01/artifacts/G2-v3/inputs-private.json",
+    "runs/pilot-20261111-01/artifacts/G2-v3/revision-notes.md",
+    "runs/pilot-20261111-01/artifacts/G2-v3/self-check.json",
+    "runs/pilot-20261111-01/artifacts/G2-v3/source-additions.json"
+  ],
+  "reviewed_at": "2026-11-10T23:20:59.624605Z",
+  "is_synthetic": false
+}

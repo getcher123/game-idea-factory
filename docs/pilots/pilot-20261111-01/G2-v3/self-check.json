@@ -1,0 +1,90 @@
+{
+  "run_id": "pilot-20261111-01",
+  "gate": "G2",
+  "version": 3,
+  "checked_at": "2026-11-10T23:17:33.983575Z",
+  "concepts": {
+    "count": 3,
+    "states_each": 5,
+    "authored_outcomes_each": 2,
+    "references": "pass"
+  },
+  "card": {
+    "unique_ids": "pass",
+    "tabs_panels_controls": "pass",
+    "javascript_syntax": "pass",
+    "literal_fragment": "pass",
+    "network_calls": false,
+    "draw_functions_node_execution": {
+      "status": "pass",
+      "cases": 150,
+      "widths": [
+        280,
+        320,
+        390,
+        600,
+        736
+      ],
+      "scope": "Actual SVG-generating functions executed in Node; no DOM/browser/physics",
+      "finite_values_well_formed_svg_text_anchor_bounds": "pass",
+      "C2_rectangles_within_bounds": "pass",
+      "C2_displayed_contact_hits_cargo_and_not_A": 15,
+      "C2_retains_length_angle_and_vertical_displacement": 10,
+      "C2_released_beam_outside_upper_zone": "pass",
+      "C2_trajectory_check": {
+        "method": "SAT intersections of the actual oriented beam rectangle with A and cargo; 10001 static angular samples per width",
+        "status": "pass",
+        "paths": [
+          {
+            "width": 280,
+            "initial_angle_deg": -105.66426685137353,
+            "displayed_impact_angle_deg": -134.0,
+            "first_cargo_contact_angle_deg_sampled": -133.99716642668514,
+            "A_contact_before_displayed_impact": false,
+            "sample_count": 10001
+          },
+          {
+            "width": 320,
+            "initial_angle_deg": -105.66426685137353,
+            "displayed_impact_angle_deg": -134.0,
+            "first_cargo_contact_angle_deg_sampled": -133.99716642668514,
+            "A_contact_before_displayed_impact": false,
+            "sample_count": 10001
+          },
+          {
+            "width": 390,
+            "initial_angle_deg": -105.66426685137353,
+            "displayed_impact_angle_deg": -134.0,
+            "first_cargo_contact_angle_deg_sampled": -133.99716642668514,
+            "A_contact_before_displayed_impact": false,
+            "sample_count": 10001
+          },
+          {
+            "width": 600,
+            "initial_angle_deg": -105.66426685137353,
+            "displayed_impact_angle_deg": -134.0,
+            "first_cargo_contact_angle_deg_sampled": -133.99716642668514,
+            "A_contact_before_displayed_impact": false,
+            "sample_count": 10001
+          },
+          {
+            "width": 736,
+            "initial_angle_deg": -105.66426685137353,
+            "displayed_impact_angle_deg": -134.0,
+            "first_cargo_contact_angle_deg_sampled": -133.99716642668514,
+            "A_contact_before_displayed_impact": false,
+            "sample_count": 10001
+          }
+        ],
+        "limitation": "Geometric sampled path, not continuous collision detection or physical simulation"
+      }
+    },
+    "browser_runtime_and_layout": "blocked",
+    "blocker": "Prior Chromium socket failure and cloud file URL denial; no bypass attempted. Actual browser/font layout not verified."
+  },
+  "physics_simulation": "not_run",
+  "human_comprehension": "not_run",
+  "participants": 0,
+  "actual_games_played": 0,
+  "paid_external_actions": 0
+}
