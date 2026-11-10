@@ -1,0 +1,98 @@
+{
+  "run_id": "pilot-20261111-01",
+  "gate": "G1",
+  "lens": "evidence",
+  "reviewer_id": "/root/g0_scope_review",
+  "artifact_sha256": "1facaac0fbbf31fb7611021241b2aa81318c8bfe6796d1d51d8d0c57e20764cf",
+  "verdict": "PASS",
+  "findings": [
+    {
+      "id": "G1-EVID-001",
+      "severity": "note",
+      "observation": "Независимо открыты все 13 основных URL из evidence.jsonl. Описания действий, авторы и платформенные заявления соответствуют сохранённым наблюдениям. Источники подтверждают наличие аналогов, а не лично проверенное управление, удержание или органический спрос; пакет выдерживает это различие.",
+      "source": "evidence.jsonl; artifacts/G1-v1/research.md; все 13 source_url в evidence_refs",
+      "action": "Сохранять оговорку о чтении описаний и отсутствии собственных запусков при предъявлении пользователю.",
+      "resolution": "fixed",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G1-EVID-002",
+      "severity": "note",
+      "observation": "CUL01/CUL02 перепроверены: YouTube сообщает строгие нижние границы более 250M и более 150M просмотров за 01.01–30.06.2026 глобально. Даты публикаций 04.09 и 06.09.2026 совпали. Пакет не превращает эти числа в уникальных зрителей, Shorts, игроков, рост, органику или сегмент US/UK 18–35. Отсутствующие точные времена не придуманы; календарные даты и окна сохранены в тексте наблюдений.",
+      "source": "https://blog.youtube/culture-and-trends/youtube-bento-box-meal-prep-trend/; https://blog.youtube/culture-and-trends/auto-detailing-videos/; evidence.jsonl CUL01/CUL02; artifacts/G1-v1/source-dates.json",
+      "action": "Не использовать глобальные видеообъёмы для ранжирования вероятности успеха трёх игровых территорий.",
+      "resolution": "fixed",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G1-EVID-003",
+      "severity": "note",
+      "observation": "Даты и контрпримеры проверены: Goods Master август 2026, Pack a Bag декабрь 2023 с обновлением сентябрь 2026, Knock It Off Kitty 18.10.2026 20:58 UTC, Uncovered 22.10.2026 23:11 UTC с обновлением 28.10. Исторический релиз отделён от свежего обновления; неизвестные результаты небольших игр не названы неудачей. AppMagic используется как исходный аналитический контекст native mobile, без переноса оценок рынка на web.",
+      "source": "evidence.jsonl GS03/GS04/GS06/RC02/RM02/RM03; artifacts/G1-v1/research.md",
+      "action": "На G2 отдельно проверить оригинальность конкретных правил; нынешний PASS не удостоверяет новизну будущей механики.",
+      "resolution": "fixed",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G1-EVID-004",
+      "severity": "note",
+      "observation": "Полнота пакета и дедупликация достаточны: 16 перечисленных файлов прочитаны; общий SHA совпал. Основной реестр содержит 13 свидетельств, 6 сигналов, 3 кластера, 3 территории и 7 семейств (6 использованы сигналами); validate-research подтвердил форматы и связи. Несколько страниц YouTube, AppMagic, CrazyGames и Poki/Tuki Tuki не подсчитываются как независимые замеры одного спроса. source_independence трактуется и поясняется как происхождение описаний/контекста, не подтверждение market fit.",
+      "source": "artifacts/G1-v1/proposal.json; evidence.jsonl; signals.jsonl; clusters.json; opportunities.json; scouting/",
+      "action": "Сохранять разделение происхождения источников и независимости рыночных измерений.",
+      "resolution": "fixed",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G1-EVID-005",
+      "severity": "note",
+      "observation": "Региональный пробел и границы проверок обозначены: отдельно записаны US/GB попытки Trending Now/Explore, недоступные ряды не заменены числами, возрастной срез и спрос unknown. Невозможность загрузить ролики не выдана за просмотр. Browser QA BLOCKED, человеческие тесты и игровой запуск NOT_RUN. Это позволяет выбрать следующую исследовательскую гипотезу, но не обосновывает коммерческий прогноз.",
+      "source": "scouting/culture-scout/radar-attempts.json; scouting/culture-scout/source-notes.md; artifacts/G1-v1/research.md; artifacts/G1-v1/self-check.json",
+      "action": "Предъявить выбор территории как ограниченную гипотезу; повторно собрать региональные и поведенческие данные перед решениями, которым они необходимы.",
+      "resolution": "fixed",
+      "risk_acceptance": null
+    },
+    {
+      "id": "G1-EVID-006",
+      "severity": "minor",
+      "observation": "В разделе «Канал и продукт» research.md формулировка «Poki требует» несколько жёстче первоисточника: What we look for перечисляет оцениваемые сигналы и прямо говорит, что они не являются checklist с проходным баллом. Запись PL02 аккуратнее использует «указывает ... среди критериев». Ошибка не меняет выбор канала или вывод о спросе и не блокирует G1.",
+      "source": "artifacts/G1-v1/research.md: Канал и продукт; https://developers.poki.com/guide/what-we-look-for",
+      "action": "В пользовательском пересказе и следующей редакции использовать «Poki оценивает» или «Poki выделяет среди критериев», не называть все пункты обязательными требованиями.",
+      "resolution": "open",
+      "risk_acceptance": null
+    }
+  ],
+  "evidence_refs": [
+    "artifacts/G1-v1/proposal.json",
+    "evidence.jsonl",
+    "signals.jsonl",
+    "clusters.json",
+    "opportunities.json",
+    "artifacts/G0-v1/brief.md",
+    "scouting/culture-scout/candidate-evidence.jsonl",
+    "scouting/culture-scout/radar-attempts.json",
+    "scouting/culture-scout/source-metadata.json",
+    "scouting/culture-scout/source-notes.md",
+    "scouting/game-scout/evidence-candidates.jsonl",
+    "scouting/game-scout/scout-report.md",
+    "scouting/game-scout/source-locators.json",
+    "artifacts/G1-v1/approval-card.html",
+    "artifacts/G1-v1/research.md",
+    "artifacts/G1-v1/self-check.json",
+    "artifacts/G1-v1/source-dates.json",
+    "https://www.crazygames.com/game/knock-it-all",
+    "https://www.crazygames.com/game/hit-the-stack",
+    "https://poki.com/en/g/goods-master",
+    "https://poki.com/en/g/pack-a-bag",
+    "https://natanr123.itch.io/knock-it-off-kitty",
+    "https://blog.youtube/culture-and-trends/youtube-bento-box-meal-prep-trend/",
+    "https://blog.youtube/culture-and-trends/auto-detailing-videos/",
+    "https://appmagic.rocks/blog/new-puzzle-order-sort-block-screw",
+    "https://appmagic.rocks/blog/smash-fest-hybridcasual-trend/",
+    "https://www.crazygames.com/game/makeover-cleaning-asmr",
+    "https://ivanso-games.itch.io/uncovered",
+    "https://support.google.com/youtube/answer/13748639?hl=en",
+    "https://developers.poki.com/guide/what-we-look-for"
+  ],
+  "reviewed_at": "2026-11-10T22:27:49.678484Z",
+  "is_synthetic": false
+}
