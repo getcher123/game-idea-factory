@@ -1,0 +1,94 @@
+{
+  "checked_at": "2026-11-10T22:07:24.537958+00:00",
+  "display_date": "2026-11-11 Europe/Moscow",
+  "repo": "getcher123/game-idea-factory",
+  "base_commit": "0f5b28f4bfd63b9db32ef3d798898e7c0cc2a6e3",
+  "branch": "codex/pilot-20261111-g0",
+  "checks": [
+    {
+      "name": "github_read",
+      "status": "pass",
+      "observed": "Authenticated connector returned repository metadata and main SHA; matches local HEAD."
+    },
+    {
+      "name": "git_worktree",
+      "status": "pass",
+      "observed": "Isolated branch/worktree created; original checkout retained."
+    },
+    {
+      "name": "python",
+      "status": "pass",
+      "observed": "Python 3.12.14."
+    },
+    {
+      "name": "pipeline_unittest",
+      "status": "pass",
+      "observed": "python3 -m unittest discover -s tests -v returned exit 0."
+    },
+    {
+      "name": "check_repo",
+      "status": "pass",
+      "observed": "python3 tools/pipeline.py check-repo returned exit 0."
+    },
+    {
+      "name": "web_search",
+      "status": "pass",
+      "observed": "Fetched official Godot, Android, Roblox and YouTube documentation through search connector."
+    },
+    {
+      "name": "independent_subagents",
+      "status": "pass",
+      "observed": "Separate reviewer /root/g0_scope_review returned actual read-only preliminary review."
+    },
+    {
+      "name": "godot_binary",
+      "status": "pass",
+      "observed": "godot --version returned 4.6.3.stable.official.7d41c59c4; no project export tested."
+    },
+    {
+      "name": "godot_web_export",
+      "status": "not_run",
+      "observed": "No approved game core at G0; templates, build and target-device behavior not tested."
+    },
+    {
+      "name": "local_playwright_browser",
+      "status": "blocked",
+      "observed": "Chromium launch failed with socket() failed: Operation not permitted. No browser interaction test passed."
+    },
+    {
+      "name": "cloud_browser_file_preview",
+      "status": "blocked",
+      "observed": "Cloud browser inventory succeeded, file URL rejected by browser security policy (only HTTP/HTTPS allowed). No bypass attempted."
+    },
+    {
+      "name": "visualization_render_wrapper",
+      "status": "pass",
+      "observed": "Skill renderer accepted the fragment and produced a preview wrapper; this is not screenshot/layout verification."
+    },
+    {
+      "name": "remote_desktop_inventory",
+      "status": "pass",
+      "observed": "Account device inventory returned one online device; no device files or applications were modified."
+    },
+    {
+      "name": "remote_godot_or_roblox_studio",
+      "status": "not_run",
+      "observed": "Remote application readiness is not established by an online device."
+    },
+    {
+      "name": "image_generation",
+      "status": "not_run",
+      "observed": "Tool is exposed, but no generation made or service cost authorized for this pilot."
+    },
+    {
+      "name": "paid_services_ads_publication",
+      "status": "not_run",
+      "observed": "Outside current G0 task; proposed additional external budget is 0 USD."
+    },
+    {
+      "name": "real_player_test",
+      "status": "not_run",
+      "observed": "No participant observations exist."
+    }
+  ]
+}
