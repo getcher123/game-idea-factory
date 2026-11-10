@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Authoritative run state; semantic relationships are checked by audit",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "run_id", "created_at", "updated_at", "current_gate", "end_gate", "status", "records", "history", "is_synthetic"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "run_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{2,63}$"},
+    "created_at": {"type": "string", "minLength": 1},
+    "updated_at": {"type": "string", "minLength": 1},
+    "current_gate": {"enum": ["G0", "G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9", "G10", "G11"]},
+    "end_gate": {"enum": ["G2", "G9", "G11"]},
+    "status": {"enum": ["draft", "awaiting_review", "awaiting_user", "blocked", "needs_revalidation", "hold", "stopped", "complete"]},
+    "records": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["proposal", "reviews", "decision"],
+        "properties": {
+          "proposal": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["manifest", "manifest_sha256", "files", "sha256", "author_ids", "options", "summary", "gate"],
+            "properties": {
+              "manifest": {"type": "string", "minLength": 1},
+              "manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+              "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+              "gate": {"type": "string", "pattern": "^G([0-9]|1[01])$"},
+              "summary": {"type": "string", "minLength": 1},
+              "author_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+              "options": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["id", "label"], "additionalProperties": false, "properties": {"id": {"type": "string", "minLength": 1}, "label": {"type": "string", "minLength": 1}}}},
+              "files": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["path", "sha256"], "additionalProperties": false, "properties": {"path": {"type": "string", "minLength": 1}, "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}}}}
+            }
+          },
+          "reviews": {"type": "array", "items": {"type": "object"}},
+          "decision": {"type": ["object", "null"]}
+        }
+      }
+    },
+    "history": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["event", "at"], "properties": {"event": {"type": "string", "minLength": 1}, "at": {"type": "string", "minLength": 1}}}},
+    "is_synthetic": {"type": "boolean"}
+  }
+}

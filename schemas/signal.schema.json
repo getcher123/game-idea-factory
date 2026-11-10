@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/getcher123/game-idea-factory/blob/main/schemas/signal.schema.json",
+  "title": "Game Idea Factory normalized signal",
+  "description": "One JSONL line. A distinct playable hypothesis, linked to immutable evidence and a deduplication cluster.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id", "title", "category", "cluster_id", "evidence_ids", "observed_at", "summary",
+    "gameable_action", "player_choice", "trend_status", "confidence", "traffic_origin",
+    "counterevidence", "analogs", "risks", "next_test", "is_synthetic"
+  ],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"},
+    "title": {"type": "string", "minLength": 1},
+    "category": {"type": "string", "enum": ["meme", "format", "emotion", "action", "game_mechanic", "business_model", "other"]},
+    "cluster_id": {"type": "string", "minLength": 1},
+    "evidence_ids": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "observed_at": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d{1,6})?(?:Z|[+-]\\d{2}:\\d{2})$"},
+    "summary": {"type": "string", "minLength": 1},
+    "gameable_action": {"type": "string", "minLength": 1},
+    "player_choice": {"type": "string", "minLength": 1},
+    "trend_status": {"type": "string", "enum": ["emerging", "growing", "stable", "declining", "unknown"]},
+    "confidence": {"type": "string", "enum": ["low", "medium", "high", "unknown"]},
+    "traffic_origin": {"type": "string", "enum": ["organic", "paid", "mixed", "unknown"]},
+    "counterevidence": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "analogs": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "risks": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "next_test": {"type": "string", "minLength": 1},
+    "is_synthetic": {"type": "boolean"}
+  }
+}

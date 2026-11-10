@@ -1,0 +1,57 @@
+{
+  "gate": "G1",
+  "territories": [
+    {
+      "id": "O-SYN-001",
+      "title": "SYNTHETIC: shape packing with controllable deformation",
+      "signal_ids": ["S-SYN-001"],
+      "gameable_action": "Drag soft-looking objects into a bounded box.",
+      "emotion": "Satisfaction when an awkward shape finally fits.",
+      "player_choice": "Choose whether to save height or width when an object deforms.",
+      "analogs": [{"name":"SYNTHETIC: basic shape packing game","url":null,"mechanic_relation":"Packing without deformation tradeoff.","visibility_status":"unknown","performance_evidence":null}],
+      "saturation_risk": "unknown: no real market comparison has been performed",
+      "counterhypothesis": "Viewers may enjoy a transformation video but dislike making spatial decisions.",
+      "cheapest_test": "One greybox screen with two object shapes and an explicit loss condition.",
+      "channel": "synthetic_short_video_test",
+      "confidence": "low",
+      "source_independence": "single_source",
+      "rights_risks": ["Use original shapes and audio; do not reuse the fictional source's assets."],
+      "evidence_gaps": ["No live source or player study: this is a fixture, not a ranked idea." ]
+    },
+    {
+      "id": "O-SYN-002",
+      "title": "SYNTHETIC: gate-routing timing puzzle",
+      "signal_ids": ["S-SYN-002"],
+      "gameable_action": "Rotate a gate to direct rolling objects.",
+      "emotion": "Anticipation and satisfying chain reactions.",
+      "player_choice": "Trade a safe route for a risky sequence that frees more space.",
+      "analogs": [],
+      "saturation_risk": "unknown: paid ad format alone does not describe the market",
+      "counterhypothesis": "The clip may overstate controllability and omit awkward timing.",
+      "cheapest_test": "Test real input latency and player choices in a ten-second simulation.",
+      "channel": "synthetic_paid_creative_test",
+      "confidence": "low",
+      "source_independence": "single_source",
+      "rights_risks": [],
+      "evidence_gaps": ["Paid traffic only; no evidence of organic sharing or player return." ]
+    },
+    {
+      "id": "O-SYN-003",
+      "title": "SYNTHETIC: clearing bubbles to make room",
+      "signal_ids": ["S-SYN-003"],
+      "gameable_action": "Choose a bubble to pop before space runs out.",
+      "emotion": "Relief after creating room just in time.",
+      "player_choice": "Remove an easy target now or reserve a future chain reaction.",
+      "analogs": [{"name":"SYNTHETIC: bubble popping listing","url":null,"mechanic_relation":"Same surface action but no verified planning choice.","visibility_status":"unknown","performance_evidence":null}],
+      "saturation_risk": "unknown: no comparable titles have been inspected",
+      "counterhypothesis": "Players may tire of tapping if future consequences are unpredictable.",
+      "cheapest_test": "Compare two simple levels for voluntary replay without rewards.",
+      "channel": "synthetic_browser_demo",
+      "confidence": "low",
+      "source_independence": "single_source",
+      "rights_risks": [],
+      "evidence_gaps": ["No verified installations, retention, competitor sample, or target geography." ]
+    }
+  ],
+  "is_synthetic": true
+}

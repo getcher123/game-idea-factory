@@ -1,0 +1,22 @@
+{
+  "run_id": "synthetic-demo-001",
+  "gate": "G1",
+  "lens": "evidence",
+  "reviewer_id": "synthetic-independent-evidence-reviewer",
+  "artifact_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "verdict": "CHANGES_REQUIRED",
+  "findings": [
+    {
+      "id": "F-SYN-001",
+      "severity": "major",
+      "observation": "SYNTHETIC EXAMPLE: the repost must not count as an independent source family.",
+      "source": "E-SYN-001 and E-SYN-002",
+      "action": "Retain a single-family classification until an independent data origin is observed.",
+      "resolution": "open",
+      "risk_acceptance": null
+    }
+  ],
+  "evidence_refs": ["E-SYN-001", "E-SYN-002"],
+  "reviewed_at": "2026-11-11T00:00:00Z",
+  "is_synthetic": true
+}

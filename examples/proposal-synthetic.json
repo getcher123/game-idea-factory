@@ -1,0 +1,12 @@
+{
+  "gate": "G1",
+  "author_ids": ["synthetic-trend-scout-agent"],
+  "files": ["evidence.jsonl", "signals.jsonl", "clusters.json", "opportunities.json"],
+  "summary": "SYNTHETIC fixture only: three hypothetical territories constructed to test formatting, deduplication and G1 review; no real market conclusions.",
+  "options": [
+    {"id": "O-SYN-001", "label": "Hypothetical shape packing"},
+    {"id": "O-SYN-002", "label": "Hypothetical gate routing"},
+    {"id": "O-SYN-003", "label": "Hypothetical bubble clearing"}
+  ],
+  "is_synthetic": true
+}

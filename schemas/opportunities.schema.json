@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/getcher123/game-idea-factory/blob/main/schemas/opportunities.schema.json",
+  "title": "Game Idea Factory G1 opportunities",
+  "description": "Three distinct territories proposed for the human G1 choice, not established commercial opportunities.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["gate", "territories", "is_synthetic"],
+  "properties": {
+    "gate": {"const": "G1"},
+    "territories": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id", "title", "signal_ids", "gameable_action", "emotion", "player_choice",
+          "analogs", "saturation_risk", "counterhypothesis", "cheapest_test",
+          "channel", "confidence", "source_independence", "rights_risks", "evidence_gaps"
+        ],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "title": {"type": "string", "minLength": 1},
+          "signal_ids": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "gameable_action": {"type": "string", "minLength": 1},
+          "emotion": {"type": "string", "minLength": 1},
+          "player_choice": {"type": "string", "minLength": 1},
+          "analogs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["name", "url", "mechanic_relation", "visibility_status", "performance_evidence"],
+              "properties": {
+                "name": {"type": "string", "minLength": 1},
+                "url": {"anyOf": [{"type": "string", "pattern": "^https?://"}, {"type": "null"}]},
+                "mechanic_relation": {"type": "string", "minLength": 1},
+                "visibility_status": {"type": "string", "enum": ["breakout", "comparable", "less_visible", "unknown"]},
+                "performance_evidence": {"anyOf": [{"type": "string", "minLength": 1}, {"type": "null"}]}
+              }
+            }
+          },
+          "saturation_risk": {"type": "string", "minLength": 1},
+          "counterhypothesis": {"type": "string", "minLength": 1},
+          "cheapest_test": {"type": "string", "minLength": 1},
+          "channel": {"type": "string", "minLength": 1},
+          "confidence": {"type": "string", "enum": ["low", "medium", "high", "unknown"]},
+          "source_independence": {"type": "string", "enum": ["single_source", "multiple_independent", "unknown"]},
+          "rights_risks": {"type": "array", "items": {"type": "string", "minLength": 1}},
+          "evidence_gaps": {"type": "array", "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    },
+    "is_synthetic": {"type": "boolean"}
+  }
+}

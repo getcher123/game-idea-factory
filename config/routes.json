@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "entrypoint": "AGENTS.md",
+  "state_overview": "state.md",
+  "run_truth": "runs/{run_id}/run.json",
+  "routes": {
+    "G0": {"name": "brief", "lead": "orchestrator", "agent_file": "agents/orchestrator.md", "docs": ["docs/PIPELINE.md", "docs/APPROVALS.md"], "required_reviews": []},
+    "G1": {"name": "research", "lead": "trend_scout", "agent_file": "agents/discovery.md", "docs": ["docs/RESEARCH_PROTOCOL.md", "docs/REVIEW_PROTOCOL.md"], "required_reviews": ["evidence", "market_skeptic"]},
+    "G2": {"name": "concepts", "lead": "concept_designer", "agent_file": "agents/discovery.md", "docs": ["docs/PIPELINE.md", "docs/APPROVALS.md"], "required_reviews": []},
+    "G3": {"name": "core", "lead": "prototype_builder", "agent_file": "agents/prototype-and-test.md", "docs": ["docs/ROUTES.md", "docs/REVIEW_PROTOCOL.md"], "required_reviews": ["game_design", "ux", "technical"]},
+    "G4": {"name": "mutations", "lead": "prototype_builder", "agent_file": "agents/prototype-and-test.md", "docs": ["docs/PIPELINE.md"], "required_reviews": []},
+    "G5": {"name": "comparisons", "lead": "experiment_analyst", "agent_file": "agents/prototype-and-test.md", "docs": ["docs/REVIEW_PROTOCOL.md"], "required_reviews": ["experiment_design", "game_design"]},
+    "G6": {"name": "visual_direction", "lead": "art_director", "agent_file": "agents/product-design.md", "docs": ["docs/APPROVALS.md"], "required_reviews": []},
+    "G7": {"name": "distribution", "lead": "distribution_designer", "agent_file": "agents/product-design.md", "docs": ["docs/PIPELINE.md"], "required_reviews": []},
+    "G8": {"name": "progression", "lead": "systems_designer", "agent_file": "agents/product-design.md", "docs": ["docs/PIPELINE.md"], "required_reviews": []},
+    "G9": {"name": "full_design", "lead": "systems_designer", "agent_file": "agents/product-design.md", "docs": ["docs/REVIEW_PROTOCOL.md", "docs/HANDOFF_GAME_FACTORY.md"], "required_reviews": ["systems", "production", "ux"]},
+    "G10": {"name": "external_validation", "lead": "experiment_analyst", "agent_file": "agents/prototype-and-test.md", "docs": ["docs/PIPELINE.md"], "required_reviews": []},
+    "G11": {"name": "release", "lead": "release_coordinator", "agent_file": "agents/product-design.md", "docs": ["docs/REVIEW_PROTOCOL.md"], "required_reviews": ["qa", "distribution", "rights"]}
+  }
+}

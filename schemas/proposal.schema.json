@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/getcher123/game-idea-factory/blob/main/schemas/proposal.schema.json",
+  "title": "Game Idea Factory gate proposal manifest",
+  "description": "Manifest of reviewable run-relative artifacts and explicit user choice options. Synthetic proposals cannot be approved in a real run.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["gate", "author_ids", "files", "summary", "options", "is_synthetic"],
+  "properties": {
+    "gate": {"type": "string", "enum": ["G0", "G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9", "G10", "G11"]},
+    "author_ids": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "files": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^(?![A-Za-z]:)(?!.*(?:^|/)\\.{1,2}(?:/|$))[^\\\\/:]+(?:/[^\\\\/:]+)*$"}},
+    "summary": {"type": "string", "minLength": 1},
+    "options": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "label": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "is_synthetic": {"type": "boolean"}
+  }
+}

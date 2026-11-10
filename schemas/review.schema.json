@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/getcher123/game-idea-factory/blob/main/schemas/review.schema.json",
+  "title": "Game Idea Factory independent review",
+  "description": "One independent subagent lens for one immutable artifact SHA-256. Synthetic reviews never satisfy real review gates.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "gate", "lens", "reviewer_id", "artifact_sha256", "verdict", "findings", "evidence_refs", "reviewed_at", "is_synthetic"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1},
+    "gate": {"type": "string", "enum": ["G0", "G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8", "G9", "G10", "G11"]},
+    "lens": {"type": "string", "minLength": 1},
+    "reviewer_id": {"type": "string", "minLength": 1},
+    "artifact_sha256": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"},
+    "verdict": {"type": "string", "enum": ["PASS", "CHANGES_REQUIRED", "BLOCKED", "NOT_RUN"]},
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "severity", "observation", "source", "action", "resolution", "risk_acceptance"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "severity": {"type": "string", "enum": ["critical", "major", "minor", "note"]},
+          "observation": {"type": "string", "minLength": 1},
+          "source": {"type": "string", "minLength": 1},
+          "action": {"type": "string", "minLength": 1},
+          "resolution": {"type": "string", "enum": ["open", "fixed", "accepted_risk"]},
+          "risk_acceptance": {
+            "anyOf": [
+              {"type": "null"},
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["quote", "message_ref"],
+                "properties": {
+                  "quote": {"type": "string", "minLength": 1},
+                  "message_ref": {"type": "string", "minLength": 1}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "evidence_refs": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "reviewed_at": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d{1,6})?(?:Z|[+-]\\d{2}:\\d{2})$"},
+    "is_synthetic": {"type": "boolean"}
+  }
+}

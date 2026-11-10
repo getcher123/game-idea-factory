@@ -1,0 +1,29 @@
+{
+  "clusters": [
+    {
+      "id": "C-SYN-001",
+      "theme": "SYNTHETIC: fitting soft-looking shapes",
+      "signal_ids": ["S-SYN-001"],
+      "evidence_ids": ["E-SYN-001", "E-SYN-002"],
+      "source_families": ["synthetic-original-clip-family"],
+      "dedup_notes": "E-SYN-002 is a repost of E-SYN-001; this cluster has one source family, not two independent confirmations."
+    },
+    {
+      "id": "C-SYN-002",
+      "theme": "SYNTHETIC: rotating a route gate",
+      "signal_ids": ["S-SYN-002"],
+      "evidence_ids": ["E-SYN-003"],
+      "source_families": ["synthetic-advertiser-family"],
+      "dedup_notes": "One fictional advertisement. No claims about organic popularity are permitted."
+    },
+    {
+      "id": "C-SYN-003",
+      "theme": "SYNTHETIC: limited-space bubble clearing",
+      "signal_ids": ["S-SYN-003"],
+      "evidence_ids": ["E-SYN-004"],
+      "source_families": ["synthetic-store-listing-family"],
+      "dedup_notes": "One fictional listing. No download or retention claims are available."
+    }
+  ],
+  "is_synthetic": true
+}

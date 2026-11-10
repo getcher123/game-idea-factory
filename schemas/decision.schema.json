@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Recorded approval; actual speaker identity is checked by the orchestrator",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["actor", "decision", "quote", "message_ref", "recorded_at", "gate", "run_id", "proposal_sha256", "choice", "record_path", "is_synthetic"],
+  "properties": {
+    "actor": {"const": "user"},
+    "decision": {"const": "approve"},
+    "quote": {"type": "string", "minLength": 1},
+    "message_ref": {"type": "string", "minLength": 1},
+    "recorded_at": {"type": "string", "minLength": 1},
+    "gate": {"type": "string", "pattern": "^G([0-9]|1[01])$"},
+    "run_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{2,63}$"},
+    "proposal_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "choice": {"type": "string", "minLength": 1},
+    "record_path": {"type": "string", "pattern": "^decisions/[^/]+\\.json$"},
+    "is_synthetic": {"type": "boolean"}
+  }
+}

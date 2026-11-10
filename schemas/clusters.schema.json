@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/getcher123/game-idea-factory/blob/main/schemas/clusters.schema.json",
+  "title": "Game Idea Factory deduplication clusters",
+  "description": "Container for groups of related signals and source families. Member evidence can be reposts, not independent confirmations.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["clusters", "is_synthetic"],
+  "properties": {
+    "clusters": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "theme", "signal_ids", "evidence_ids", "source_families", "dedup_notes"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "theme": {"type": "string", "minLength": 1},
+          "signal_ids": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "evidence_ids": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "source_families": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "dedup_notes": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "is_synthetic": {"type": "boolean"}
+  }
+}
